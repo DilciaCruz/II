@@ -41,4 +41,9 @@ public class MainViewController implements Initializable {
         WindowsManager.getStage("/usuarios").show();
     }
     
+    
+     @FXML
+    private void AlumnosMenuClick(){
+        WindowsManager.getStage("/Alumnos").show();
+    }
 }

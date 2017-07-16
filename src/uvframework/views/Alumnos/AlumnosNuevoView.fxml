@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="541.0" prefWidth="444.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uvframework.controllers.Alumnos.AlumnosNuevoViewController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="10.0" layoutY="10.0" prefHeight="529.0" prefWidth="445.0">
+         <children>
+            <Label layoutX="32.0" layoutY="14.0" text="Nuevo Alumno">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button layoutX="306.0" layoutY="410.0" mnemonicParsing="false" onAction="#CrearBtnClick" prefHeight="38.0" prefWidth="96.0" text="Crear" />
+            <Button layoutX="33.0" layoutY="410.0" mnemonicParsing="false" onAction="#CancelarBtnClick" prefHeight="38.0" prefWidth="96.0" text="Cancelar" />
+            <TextField fx:id="AlmCod" layoutX="32.0" layoutY="49.0" prefHeight="27.0" prefWidth="242.0" promptText="Codigo" />
+            <TextField fx:id="AlmNom" layoutX="33.0" layoutY="84.0" prefHeight="27.0" prefWidth="370.0" promptText="Nombres" />
+            <TextField fx:id="AlmApe" layoutX="33.0" layoutY="127.0" prefHeight="27.0" prefWidth="370.0" promptText="Apellidos" />
+            <TextField fx:id="AlmDir" layoutX="33.0" layoutY="168.0" prefHeight="27.0" prefWidth="370.0" promptText="Direccion" />
+            <TextField fx:id="AlmTel" layoutX="32.0" layoutY="213.0" prefHeight="27.0" prefWidth="370.0" promptText="Telefono" />
+            <TextField fx:id="AlmCel" layoutX="33.0" layoutY="265.0" prefHeight="27.0" prefWidth="370.0" promptText="Celular" />
+            <TextField fx:id="AlmMail" layoutX="32.0" layoutY="311.0" prefHeight="27.0" prefWidth="370.0" promptText="correo Electronico" />
+            <TextField fx:id="AlmGen" layoutX="32.0" layoutY="365.0" prefHeight="27.0" prefWidth="370.0" promptText="genero" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
