@@ -68,8 +68,8 @@ public class AlumnosViewController implements Initializable {
         
         UVF.workdata.put("AlmCod", AlmCod);
         
-        //WindowsManager.getStage("/Alumnos/editar",true).show();
-        WindowsManager.getStage("/Alumnos/eliminar",true).show();
+        WindowsManager.getStage("/Alumnos/editar",true).show();
+    
     }
     
     
