@@ -128,5 +128,23 @@ public class AlumnosModel {
             return null;
         }
     }
-
+    
+     public static Boolean Eliminar(AlumnoEntity alumno){
+        try {
+           
+            String qry = "delete from alumno where AlmCod=?;";
+            
+            PreparedStatement pst = MySQLConn.conn.prepareStatement(qry);
+                        
+            pst.setString(8, alumno.AlmCod);
+            int err = pst.executeUpdate();
+            
+            return err != 0;
+            
+        } catch (SQLException ex) {
+                       
+            Logger.getLogger(AlumnosModel.class.getName()).log(Level.SEVERE, null, ex);
+            return false;
+        }
+     }
 }

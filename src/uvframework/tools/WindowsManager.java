@@ -61,7 +61,8 @@ public class WindowsManager {
             case "/Alumnos/nuevo": fullpath="views/Alumnos/AlumnosNuevoView.fxml"; break;
             case "/Alumnos": fullpath="views/Alumnos/AlumnosView1.fxml"; break;
             case "/Alumnos/editar": fullpath="views/Alumnos/AlumnosEditarView.fxml"; break;
-            case "/Alumnos/detalle": fullpath="views/Alumnos/AlumnosDetalleView.fxml"; break;   
+            case "/Alumnos/detalle": fullpath="views/Alumnos/AlumnosDetalleView.fxml"; break;
+            
             default: fullpath="views/LoginView.fxml";
         }
         

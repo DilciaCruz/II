@@ -13,9 +13,11 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javax.swing.JOptionPane;
 import uvframework.UVF;
 import uvframework.models.AlumnosModel;
+import uvframework.models.entities.AlumnoEntity;
 import uvframework.tools.TableViewAdapter;
 import uvframework.tools.TableViewColumn;
 import uvframework.tools.TableViewRow;
@@ -59,15 +61,18 @@ public class AlumnosViewController implements Initializable {
         
         tva.fromResultSet(rs, titles);
     }
-    
+      
     private void TableRowClick(){
 
         String AlmCod = ((TableViewRow) ResultadoTable.getSelectionModel().getSelectedItem()).get("AlmCod").toString();
         
         UVF.workdata.put("AlmCod", AlmCod);
         
-        WindowsManager.getStage("/Alumnos/editar",true).show();
+        //WindowsManager.getStage("/Alumnos/editar",true).show();
+        WindowsManager.getStage("/Alumnos/eliminar",true).show();
     }
+    
+    
     
      @FXML 
     private void NuevoBtnClick(){
@@ -79,10 +84,15 @@ public class AlumnosViewController implements Initializable {
     private void EditarBtnClick(){
         WindowsManager.getStage("/Alumnos/editar",true).show();
     }
-    
+      
+           
         @FXML 
     private void DetalleBtnClick(){
         WindowsManager.getStage("/Alumnos/detalle").show();
     }
     
+     @FXML 
+     private void EliminnarBtnClick(){
+         WindowsManager.getStage("/Alumnos/eliminar").show();
+    }
 }

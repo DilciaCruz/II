@@ -82,6 +82,7 @@ public class AlumnosEditarViewController implements Initializable {
         WindowsManager.getStage("/Alumnos/editar").hide();
 
     }
-
+    
+     
     
 }
