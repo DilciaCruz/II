@@ -53,7 +53,7 @@ public class UsuariosNuevoViewController implements Initializable {
     
     @FXML
     private void CancelarBtnClick(){
-    
+    WindowsManager.getStage("/usuarios/nuevo").close();
     }
     
 }

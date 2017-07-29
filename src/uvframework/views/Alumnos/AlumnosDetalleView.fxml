@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="545.0" prefWidth="427.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="uvframework.controllers.Alumnos.AlumnosDetalleViewController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="15.0" layoutY="16.0" prefHeight="529.0" prefWidth="445.0">
+         <children>
+            <Label layoutX="117.0" layoutY="22.0" text="Detalle Alumno" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Label>
+            <Button layoutX="307.0" layoutY="469.0" mnemonicParsing="false" onAction="#DetalleBtnClick" prefHeight="38.0" prefWidth="96.0" text="Aceptar" />
+            <Button layoutX="33.0" layoutY="469.0" mnemonicParsing="false" onAction="#CancelarBtnClick" prefHeight="38.0" prefWidth="96.0" text="Cancelar" />
+            <TextField fx:id="AlmCod" disable="true" layoutX="32.0" layoutY="80.0" prefHeight="27.0" prefWidth="370.0" promptText="Codigo" />
+            <TextField fx:id="AlmNom" disable="true" layoutX="32.0" layoutY="122.0" prefHeight="27.0" prefWidth="370.0" promptText="Nombres" />
+            <TextField fx:id="AlmApe" disable="true" layoutX="33.0" layoutY="162.0" prefHeight="27.0" prefWidth="370.0" promptText="Apellidos" />
+            <TextField fx:id="AlmDir" disable="true" layoutX="32.0" layoutY="206.0" prefHeight="27.0" prefWidth="370.0" promptText="Direccion" />
+            <TextField fx:id="AlmTel" disable="true" layoutX="32.0" layoutY="251.0" prefHeight="27.0" prefWidth="370.0" promptText="Telefono" />
+            <TextField fx:id="AlmCel" disable="true" layoutX="32.0" layoutY="294.0" prefHeight="27.0" prefWidth="370.0" promptText="Celular" />
+            <TextField fx:id="AlmMail" disable="true" layoutX="32.0" layoutY="340.0" prefHeight="27.0" prefWidth="370.0" promptText="Correo Electronico" />
+            <ComboBox fx:id="AlmGen" disable="true" layoutX="32.0" layoutY="400.0" prefHeight="25.0" prefWidth="370.0" promptText="Genero" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

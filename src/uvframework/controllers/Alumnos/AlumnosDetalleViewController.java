@@ -16,7 +16,7 @@ import uvframework.tools.WindowsManager;
  *
  * @author israel
  */
-public class AlumnosViewController implements Initializable {
+public class AlumnosDetalleViewController implements Initializable {
 
     /**
      * Initializes the controller class.
@@ -25,20 +25,20 @@ public class AlumnosViewController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+ 
+    @FXML
+    private void DetalleBtnClick() {
     
-     @FXML 
-    private void NuevoBtnClick(){
-        WindowsManager.getStage("/Alumnos/nuevo").show();
+    WindowsManager.getStage("/usuarios/nuevo").hide();
+    
     }
-    
-    
-       @FXML 
-    private void EditarBtnClick(){
-        WindowsManager.getStage("/Alumnos/editar").show();
+      @FXML
+    private void CancelarBtnClick() {
+
+        WindowsManager.getStage("/Alumnos/detalle").hide();
+
     }
+
     
-        @FXML 
-    private void DetalleBtnClick(){
-        WindowsManager.getStage("/Alumnos/detalle").show();
-    }
+    
 }
