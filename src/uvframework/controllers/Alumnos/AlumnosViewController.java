@@ -82,12 +82,20 @@ public class AlumnosViewController implements Initializable {
     
        @FXML 
     private void EditarBtnClick(){
+         String AlmCod = ((TableViewRow) ResultadoTable.getSelectionModel().getSelectedItem()).get("AlmCod").toString();
+        
+        UVF.workdata.put("AlmCod", AlmCod);
+        
         WindowsManager.getStage("/Alumnos/editar",true).show();
+  
     }
       
            
         @FXML 
     private void DetalleBtnClick(){
+       String AlmCod = ((TableViewRow) ResultadoTable.getSelectionModel().getSelectedItem()).get("AlmCod").toString();
+        
+        UVF.workdata.put("AlmCod", AlmCod);
         WindowsManager.getStage("/Alumnos/detalle").show();
     }
     
