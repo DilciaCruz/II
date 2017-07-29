@@ -57,7 +57,7 @@ public class AlumnosDetalleViewController implements Initializable {
       @FXML
     private void AceptarBtnClick() {
     
-    WindowsManager.getStage("/Alumnos", false).hide();
+    WindowsManager.getStage("/Alumnos/detalle", false).hide();
     
     }
 

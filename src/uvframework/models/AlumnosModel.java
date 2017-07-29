@@ -70,6 +70,33 @@ public class AlumnosModel {
         }
 
     }
+     
+         public static Boolean Detalle(AlumnoEntity alumno){
+        try {
+           
+            String qry = "SELECT AlmNom,AlmApe,AlmDir,AlmTel,AlmCel,AlmMail, AlmGen FROM alumno WHERE AlmCod=?;";
+            
+            PreparedStatement pst = MySQLConn.conn.prepareStatement(qry);
+                        
+            pst.setString(1, alumno.AlmNom);
+            pst.setString(2, alumno.AlmApe);
+            pst.setString(3, alumno.AlmDir);
+            pst.setString(4, alumno.AlmTel);
+            pst.setString(5, alumno.AlmCel);
+            pst.setString(6, alumno.AlmMail);
+            pst.setString(7, alumno.AlmGen);
+            pst.setString(8, alumno.AlmCod);
+            int err = pst.executeUpdate();
+            
+            return err != 0;
+            
+        } catch (SQLException ex) {
+                       
+            Logger.getLogger(AlumnosModel.class.getName()).log(Level.SEVERE, null, ex);
+            return false;
+        }
+
+    }
         
         
         
