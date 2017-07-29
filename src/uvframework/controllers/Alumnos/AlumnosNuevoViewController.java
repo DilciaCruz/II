@@ -59,7 +59,7 @@ public class AlumnosNuevoViewController implements Initializable {
 
         if (AlumnosModel.Nuevo(alumno)) {
             JOptionPane.showMessageDialog(null, "Alumno Ingresado Correctamente");
-            WindowsManager.getStage("/usuarios/nuevo").hide();
+            WindowsManager.getStage("/Alumnos/nuevo").hide();
         } else {
             JOptionPane.showMessageDialog(null, "Error creando alumno");
         }
@@ -69,7 +69,7 @@ public class AlumnosNuevoViewController implements Initializable {
     @FXML
     private void CancelarBtnClick() {
 
-        WindowsManager.getStage("/Alumnos/nuevo").hide();
+        WindowsManager.getStage("/Alumnos/nuevo", false).hide();
 
     }
 

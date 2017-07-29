@@ -32,18 +32,18 @@ public class MainViewController implements Initializable {
     
     @FXML
     private void CerrarMenuClick(){
-        WindowsManager.getStage("/login").show();
-        WindowsManager.getStage("/main").hide();
+        WindowsManager.getStage("/login", false).show();
+        WindowsManager.getStage("/main", false).hide();
     }
     
     @FXML
     private void UsuariosMenuClick(){
-        WindowsManager.getStage("/usuarios").show();
+        WindowsManager.getStage("/usuarios", false).show();
     }
     
     
      @FXML
     private void AlumnosMenuClick(){
-        WindowsManager.getStage("/Alumnos").show();
+        WindowsManager.getStage("/Alumnos", false).show();
     }
 }

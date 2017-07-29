@@ -23,14 +23,18 @@ import uvframework.UVF;
  */
 public class WindowsManager {
     
-    private static final Map stages = new HashMap(); 
+  private static final Map stages = new HashMap();
     
     public static Stage getStage(String path){
+        return getStage(path,false);
+    }
+    
+        public static Stage getStage(String path, Boolean force){
         Stage selected = null;
         
         try {
             
-            if(!stages.containsKey(path)){
+            if(!stages.containsKey(path) || force){
                 Parent root = getParentFXML(path);
                 selected = new Stage();
                 selected.setScene(new Scene(root));
@@ -45,7 +49,7 @@ public class WindowsManager {
         
         return selected;
     }
- 
+
     private static Parent getParentFXML(String path) throws IOException{        
         String fullpath;
 
@@ -55,8 +59,8 @@ public class WindowsManager {
             case "/usuarios": fullpath="views/usuarios/UsuariosView.fxml"; break;
             case "/usuarios/nuevo": fullpath="views/usuarios/UsuariosNuevoView.fxml"; break;
             case "/Alumnos/nuevo": fullpath="views/Alumnos/AlumnosNuevoView.fxml"; break;
-            case "/Alumnos": fullpath="views/Alumnos/AlumnosView.fxml"; break;
-             case "/Alumnos/editar": fullpath="views/Alumnos/AlumnosEditarView.fxml"; break;
+            case "/Alumnos": fullpath="views/Alumnos/AlumnosView1.fxml"; break;
+            case "/Alumnos/editar": fullpath="views/Alumnos/AlumnosEditarView.fxml"; break;
             case "/Alumnos/detalle": fullpath="views/Alumnos/AlumnosDetalleView.fxml"; break;   
             default: fullpath="views/LoginView.fxml";
         }

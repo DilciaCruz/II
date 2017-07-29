@@ -45,7 +45,7 @@ public class UsuariosNuevoViewController implements Initializable {
         
         if(UsuariosModel.Nuevo(user)){
             JOptionPane.showMessageDialog(null, "Usuario Creado");
-            WindowsManager.getStage("/usuarios/nuevo").hide();
+            WindowsManager.getStage("/usuarios/nuevo", false).hide();
         }else{
             JOptionPane.showMessageDialog(null, "Error creando usuario");
         }
@@ -53,7 +53,7 @@ public class UsuariosNuevoViewController implements Initializable {
     
     @FXML
     private void CancelarBtnClick(){
-    WindowsManager.getStage("/usuarios/nuevo").close();
+    WindowsManager.getStage("/usuarios/nuevo", false).close();
     }
     
 }

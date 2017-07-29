@@ -29,13 +29,13 @@ public class AlumnosDetalleViewController implements Initializable {
     @FXML
     private void DetalleBtnClick() {
     
-    WindowsManager.getStage("/usuarios/nuevo").hide();
+    WindowsManager.getStage("/usuarios/nuevo", false).hide();
     
     }
       @FXML
     private void CancelarBtnClick() {
 
-        WindowsManager.getStage("/Alumnos/detalle").hide();
+        WindowsManager.getStage("/Alumnos/detalle", false).hide();
 
     }
 
