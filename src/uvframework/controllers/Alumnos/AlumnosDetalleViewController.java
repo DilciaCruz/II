@@ -9,6 +9,11 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.TextField;
+import javax.swing.JOptionPane;
+import uvframework.UVF;
+import uvframework.models.AlumnosModel;
+import uvframework.models.entities.AlumnoEntity;
 import uvframework.tools.WindowsManager;
 
 /**
@@ -16,29 +21,48 @@ import uvframework.tools.WindowsManager;
  *
  * @author israel
  */
+
 public class AlumnosDetalleViewController implements Initializable {
 
+    @FXML private TextField AlmCod;
+    @FXML private TextField AlmNom;
+    @FXML private TextField AlmApe;
+    @FXML private TextField AlmDir;
+    @FXML private TextField AlmTel;
+    @FXML private TextField AlmCel;
+    @FXML private TextField AlmMail;
+    @FXML private TextField AlmGen;
+    
+    
+    
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+
+        AlumnoEntity data = AlumnosModel.getOne(UVF.workdata.get("AlmCod").toString());
+        
+        AlmCod.setText(data.AlmCod);
+        AlmNom.setText(data.AlmNom);
+        AlmApe.setText(data.AlmApe);
+        AlmDir.setText(data.AlmDir);
+        AlmTel.setText(data.AlmTel);
+        AlmCel.setText(data.AlmCel);
+        AlmMail.setText(data.AlmMail);
+        AlmGen.setText(data.AlmGen);        
     }    
- 
-    @FXML
-    private void DetalleBtnClick() {
     
-    WindowsManager.getStage("/usuarios/nuevo", false).hide();
-    
-    }
+     
       @FXML
-    private void CancelarBtnClick() {
-
-        WindowsManager.getStage("/Alumnos/detalle", false).hide();
-
+    private void AceptarBtnClick() {
+    
+    WindowsManager.getStage("/Alumnos", false).hide();
+    
     }
 
-    
     
 }
+
+    
+
