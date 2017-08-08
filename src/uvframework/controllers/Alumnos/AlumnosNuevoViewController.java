@@ -5,6 +5,7 @@
  */
 package uvframework.controllers.Alumnos;
 
+import java.beans.PropertyVetoException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
@@ -45,17 +46,17 @@ public class AlumnosNuevoViewController implements Initializable {
     }
 
     @FXML
-    private void CrearBtnClick() {
+    private void CrearBtnClick() throws PropertyVetoException {
         AlumnoEntity alumno = new AlumnoEntity();
 
-        alumno.AlmCod = AlmCod.getText();
-        alumno.AlmNom = AlmNom.getText();
-        alumno.AlmApe = AlmApe.getText();
-        alumno.AlmDir = AlmDir.getText();
-        alumno.AlmTel = AlmTel.getText();
-        alumno.AlmCel = AlmCel.getText();
-        alumno.AlmMail = AlmMail.getText();
-        alumno.AlmGen = (String) AlmGen.getValue();
+        alumno.setAlmCod(AlmCod.getText());
+        alumno.setAlmNom(AlmNom.getText());
+        alumno.setAlmApe(AlmApe.getText());
+        alumno.setAlmDir(AlmDir.getText());
+        alumno.setAlmTel(AlmTel.getText());
+        alumno.setAlmCel(AlmCel.getText());
+        alumno.setAlmMail(AlmMail.getText());
+        alumno.setAlmGen((String) AlmGen.getValue());
 
         if (AlumnosModel.Nuevo(alumno)) {
             JOptionPane.showMessageDialog(null, "Alumno Ingresado Correctamente");

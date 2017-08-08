@@ -50,7 +50,10 @@ public class AlumnosDetalleViewController implements Initializable {
         AlmTel.setText(data.AlmTel);
         AlmCel.setText(data.AlmCel);
         AlmMail.setText(data.AlmMail);
-        AlmGen.setText(data.AlmGen);        
+        AlmGen.setText(data.AlmGen);   
+        
+        
+        
     }    
     
      

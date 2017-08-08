@@ -25,7 +25,7 @@ import uvframework.tools.WindowsManager;
  *
  * @author israel
  */
-public class AlumnosEditarViewController implements Initializable {
+public class AlumnosEliminarViewController implements Initializable {
 
     @FXML private TextField AlmCod;
     @FXML private TextField AlmNom;
@@ -35,6 +35,7 @@ public class AlumnosEditarViewController implements Initializable {
     @FXML private TextField AlmCel;
     @FXML private TextField AlmMail;
     @FXML private TextField AlmGen;
+    @FXML private TextField AlmEst;
     
     
     
@@ -54,12 +55,13 @@ public class AlumnosEditarViewController implements Initializable {
         AlmCel.setText(data.AlmCel);
         AlmMail.setText(data.AlmMail);
         AlmGen.setText(data.AlmGen);        
+        AlmEst.setText(data.AlmEst);  
     }    
     
     @FXML
     private void GuardarBtnClick() throws PropertyVetoException {
     
-     AlumnoEntity alumno = new AlumnoEntity();
+        AlumnoEntity alumno = new AlumnoEntity();
         
         
         alumno.setAlmNom(AlmNom.getText());
@@ -69,19 +71,20 @@ public class AlumnosEditarViewController implements Initializable {
         alumno.setAlmCel(AlmCel.getText());
         alumno.setAlmMail(AlmMail.getText());
         alumno.setAlmGen(AlmGen.getText());
+        alumno.setAlmEst(AlmEst.getText());
         alumno.setAlmCod(AlmCod.getText());
-        if(AlumnosModel.Editar(alumno)){
-            JOptionPane.showMessageDialog(null, "Cambios Guardados");
-            WindowsManager.getStage("/Alumnos/editar").hide();
+        if(AlumnosModel.Eliminar(alumno)){
+            JOptionPane.showMessageDialog(null, "Registro Eliminado");
+            WindowsManager.getStage("/Alumnos/eliminar").hide();
         }else{
-            JOptionPane.showMessageDialog(null, "Error guardando alumnos");
+            JOptionPane.showMessageDialog(null, "Error cambiando estado de alumno");
         }
     
     }
       @FXML
     private void CancelarBtnClick() {
 
-        WindowsManager.getStage("/Alumnos/editar").hide();
+        WindowsManager.getStage("/Alumnos/eliminar").hide();
 
     }
     

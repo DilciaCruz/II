@@ -7,16 +7,17 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="545.0" prefWidth="427.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uvframework.controllers.Alumnos.AlumnosDetalleViewController">
+<AnchorPane id="AnchorPane" prefHeight="545.0" prefWidth="426.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uvframework.controllers.Alumnos.AlumnosEliminarViewController">
    <children>
-      <AnchorPane id="AnchorPane" layoutX="15.0" layoutY="16.0" prefHeight="529.0" prefWidth="445.0">
+      <AnchorPane id="AnchorPane" prefHeight="545.0" prefWidth="460.0">
          <children>
-            <Label layoutX="117.0" layoutY="22.0" text="Detalle Alumno" textAlignment="CENTER">
+            <Label layoutX="117.0" layoutY="22.0" text="Eliminar Alumno" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="26.0" />
                </font>
             </Label>
-            <Button layoutX="307.0" layoutY="469.0" mnemonicParsing="false" onAction="#AceptarBtnClick" prefHeight="38.0" prefWidth="96.0" text="Aceptar" />
+            <Button layoutX="307.0" layoutY="469.0" mnemonicParsing="false" onAction="#GuardarBtnClick" prefHeight="38.0" prefWidth="96.0" text="Guardar" />
+            <Button layoutX="33.0" layoutY="469.0" mnemonicParsing="false" onAction="#CancelarBtnClick" prefHeight="38.0" prefWidth="96.0" text="Cancelar" />
             <TextField fx:id="AlmCod" disable="true" editable="false" layoutX="32.0" layoutY="80.0" prefHeight="27.0" prefWidth="370.0" promptText="Codigo" />
             <TextField fx:id="AlmNom" disable="true" editable="false" layoutX="32.0" layoutY="122.0" prefHeight="27.0" prefWidth="370.0" promptText="Nombres" />
             <TextField fx:id="AlmApe" disable="true" editable="false" layoutX="33.0" layoutY="162.0" prefHeight="27.0" prefWidth="370.0" promptText="Apellidos" />
@@ -24,7 +25,8 @@
             <TextField fx:id="AlmTel" disable="true" editable="false" layoutX="32.0" layoutY="251.0" prefHeight="27.0" prefWidth="370.0" promptText="Telefono" />
             <TextField fx:id="AlmCel" disable="true" editable="false" layoutX="32.0" layoutY="294.0" prefHeight="27.0" prefWidth="370.0" promptText="Celular" />
             <TextField fx:id="AlmMail" disable="true" editable="false" layoutX="32.0" layoutY="340.0" prefHeight="27.0" prefWidth="370.0" promptText="Correo Electronico" />
-            <TextField fx:id="AlmGen" disable="true" editable="false" layoutX="32.0" layoutY="390.0" prefHeight="27.0" prefWidth="370.0" promptText="Genero" />
+            <TextField fx:id="AlmGen" disable="true" editable="false" layoutX="33.0" layoutY="388.0" prefHeight="25.0" prefWidth="370.0" promptText="Genero" />
+            <TextField fx:id="AlmEst" layoutX="34.0" layoutY="430.0" prefHeight="25.0" prefWidth="370.0" promptText="Estado" />
          </children>
       </AnchorPane>
    </children>
